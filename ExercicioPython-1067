@@ -1,0 +1,5 @@
+entrada = int(input())
+
+for volta in range(entrada + 1):
+    if volta % 2 ==1:
+        print(volta)
