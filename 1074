@@ -1,0 +1,21 @@
+entrada = int(input())
+
+lista = []
+for volta in range(entrada ):
+    numero = int(input())
+    mensagem = ''
+
+    if numero == 0:
+        mensagem = 'NULL'
+    elif numero % 2 ==1and numero > 0:
+        mensagem = 'ODD POSITIVE'
+    elif numero % 2 ==1 and numero < 0:
+        mensagem = 'ODD NEGATIVE'
+    elif numero % 2 ==0 and numero < 0:
+        mensagem = 'EVEN NEGATIVE'
+    elif numero % 2 == 0 and numero >0:
+        mensagem = 'EVEN POSITIVE'
+    lista.append(mensagem)
+
+for num in lista:
+    print(num)
