@@ -1,0 +1,25 @@
+#inicio = int(input("Dia: "))
+horInicio = input().split(":")
+# termino = int(input("Dia "))
+horTermino = input().split(":")
+
+
+
+def calcular_tempo(horInicio):
+    hora = 0
+    contador = 0
+    for elemento in horInicio:
+        if contador == 0:
+            hora+= int(elemento) * 60 * 60
+        elif contador == 1:
+            hora += int(elemento) * 60
+        else:
+            hora += int(elemento)
+        contador += 1
+    return hora
+
+horInicio = calcular_tempo(horInicio)
+horTermino = calcular_tempo(horTermino)
+
+print(horInicio)
+print(horTermino)
