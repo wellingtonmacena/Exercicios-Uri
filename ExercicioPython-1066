@@ -1,0 +1,22 @@
+par = 0
+impar = 0
+pos= 0
+neg =0
+for volta in range(5):
+    numero = int(input())
+
+    if numero == 0:
+        pos= pos
+    elif numero > 0:
+        pos +=1
+    else:
+        neg +=1
+
+    if numero % 2 ==0:
+        par +=1
+    else:
+        impar +=1
+print("{} valor(es) par(es)".format(par))
+print("{} valor(es) impar(es)".format(impar))
+print("{} valor(es) positivo(s)".format(pos))
+print("{} valor(es) negativo(s)".format(neg))
