@@ -1,0 +1,15 @@
+x = int(input())
+y = int(input())
+
+lista = sorted([x,y])
+
+x = lista[0]
+y = lista[1]
+
+soma = 0
+for elemento in range(x + 1, y):
+
+    if elemento % 2 ==1:
+        soma += elemento
+
+print(soma)
