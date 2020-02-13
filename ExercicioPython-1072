@@ -1,0 +1,14 @@
+entradas = int(input())
+
+soma_in = 0
+soma_out = 0
+for volta in range(entradas):
+    numero = int(input())
+
+    if numero >= 10 and numero <= 20:
+        soma_in +=1
+    else:
+        soma_out +=1
+
+print("{} in".format(soma_in))
+print("{} out".format(soma_out))
