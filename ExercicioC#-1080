@@ -1,0 +1,33 @@
+using System;
+
+namespace Uri2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int qtd_entrada = int.Parse(Console.ReadLine());
+            int maior = 0;
+            int posicao = 0;
+
+            for (int contador = 1; contador <100; contador ++)
+            {
+                int entrada = int.Parse(Console.ReadLine());
+                if (contador == 1)
+                {
+                    maior = entrada;
+                    posicao = contador;
+                }
+
+                if (entrada > maior)
+                {
+                    maior = entrada;
+                    posicao = contador + 1;
+                }
+            }
+            Console.WriteLine(maior);
+            Console.WriteLine(posicao);
+            Console.ReadLine();
+        }
+    }
+}
