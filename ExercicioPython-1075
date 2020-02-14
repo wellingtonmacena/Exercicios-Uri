@@ -1,0 +1,5 @@
+valor_de_entrada = int(input())
+
+for contador in range(10000):
+    if contador % valor_de_entrada ==2:
+        print(contador)
