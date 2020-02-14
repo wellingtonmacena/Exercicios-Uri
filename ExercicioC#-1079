@@ -1,0 +1,24 @@
+using System;
+
+namespace Uri2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int qtd_entrada = int.Parse(Console.ReadLine());
+
+            for(int contador = 0; contador <qtd_entrada; contador ++)
+            {
+                string[] entrada = Console.ReadLine().Split();
+                double elemento = double.Parse(entrada[0]);
+                double elemento1 = double.Parse(entrada[1]);
+                double elemento2 = double.Parse(entrada[2]);
+
+                double mediaPonderada = (elemento * 0.2) + (elemento1 * 0.3) + (elemento2 * 0.5);
+
+                Console.WriteLine(mediaPonderada.ToString("F1"));
+            }
+        }
+    }
+}
