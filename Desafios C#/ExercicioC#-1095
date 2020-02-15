@@ -1,0 +1,17 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int jota = 60;
+		int i = 1;
+		while (jota >=0)
+		{
+			Console.WriteLine("I=" + i +  " J=" + jota);
+			i+=3;
+			jota-=5;
+		}
+
+	}
+}
