@@ -1,0 +1,21 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int i = 1;
+		int jota = 7;
+		
+		while (i <=9)
+		{	
+			while (jota >=5)
+				{
+					Console.WriteLine("I=" + i + " J=" + jota);
+					jota -=1;
+				}
+			i +=2;
+			jota =7;
+		}
+	}
+}
