@@ -1,0 +1,15 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int entrada = int.Parse(Console.ReadLine());
+		
+		for(int contador = 1; contador <= 10; contador++)
+		{
+			Console.WriteLine(contador + " x " + entrada + " = " + contador * entrada);
+		}
+		
+	}
+}
