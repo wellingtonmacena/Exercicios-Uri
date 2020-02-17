@@ -1,0 +1,33 @@
+using System;
+
+namespace Uri2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            while (true)
+            {
+                String[] entrada = Console.ReadLine().Split();
+
+                int x = int.Parse(entrada[0]);
+                int y = int.Parse(entrada[1]);
+
+                if (x > y)
+                {
+                    Console.WriteLine("Decrescente");
+                }
+                else if (x < y)
+                {
+                    Console.WriteLine("Crescente");
+                }
+                else 
+                {
+                    break;
+                }
+            }
+            
+        }
+    }
+}
