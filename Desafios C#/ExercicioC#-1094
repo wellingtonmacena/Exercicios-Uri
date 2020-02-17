@@ -1,0 +1,47 @@
+using System;
+
+namespace Uri2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int qtd_entrada = int.Parse(Console.ReadLine());
+
+            float totalAnimais = 0;
+            float coelhos = 0;
+            float ratos = 0;
+            float sapos = 0;
+
+            for (int volta = 0; volta < qtd_entrada; volta++)
+            {
+                string[] entrada = Console.ReadLine().Split();
+                int qtd_animais = int.Parse(entrada[0]);
+                string animal = entrada[1].ToUpper();
+
+                totalAnimais += qtd_animais;
+                if (animal == "C")
+                {
+                    coelhos += qtd_animais;
+                }
+                else if (animal == "R")
+                {
+                    ratos += qtd_animais;
+                }
+                else if (animal == "S")
+                {
+                    sapos += qtd_animais;
+                }
+            }
+
+            Console.WriteLine("Total: " + totalAnimais + " cobaias");
+            Console.WriteLine("Total de coelhos: " + coelhos);
+            Console.WriteLine("Total de ratos: " + ratos);
+            Console.WriteLine("Total de sapos: " + sapos);
+            Console.WriteLine("Percentual de coelhos: " + ((coelhos / totalAnimais) * 100).ToString("F2") + " %");
+            Console.WriteLine("Percentual de ratos: " + ((ratos / totalAnimais) * 100).ToString("F2") + " %");
+            Console.WriteLine("Percentual de sapos: " + ((sapos / totalAnimais) * 100).ToString("F2") + " %");
+            Console.ReadLine();
+        }
+    }
+}
