@@ -1,0 +1,11 @@
+num_quebrade_linha = int(input())
+pum = 0
+contador = 1
+
+while pum < num_quebrade_linha:
+    if contador % 4 == 0:
+        print('PUM')
+        pum +=1
+    else:
+        print(contador, end =' ')
+    contador+=1
