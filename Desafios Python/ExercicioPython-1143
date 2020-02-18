@@ -1,0 +1,7 @@
+qtd_entrada = int(input())
+
+for contador in range(1,qtd_entrada + 1):
+    soma = 0
+    soma = contador *contador
+    soma1 = soma *  contador
+    print('{} {} {}'.format(contador, soma, soma1))
