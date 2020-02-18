@@ -1,0 +1,8 @@
+qtd_entrada = int(input())
+
+for contador in range(1, qtd_entrada + 1):
+    acrescentador =1
+    potencia = contador * contador
+    tripotencia = potencia * contador
+    print('{} {} {}'.format(contador, potencia, tripotencia))
+    print('{} {} {}'.format(contador, potencia + 1, tripotencia + 1))
