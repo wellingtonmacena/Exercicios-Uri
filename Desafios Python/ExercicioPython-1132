@@ -1,0 +1,12 @@
+a = int(input())
+b = int(input())
+
+lista = sorted([a,b])
+
+a = lista[0]
+b = lista[1]
+soma = 0
+for contador in range(a,b + 1):
+    if contador % 13 != 0:
+        soma += contador
+print(soma)
