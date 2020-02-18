@@ -1,0 +1,5 @@
+soma = 1
+for contador in range(2, 101):
+    soma += 1/contador
+
+print('{:.2f}'.format(soma))
