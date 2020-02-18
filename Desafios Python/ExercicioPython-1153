@@ -1,0 +1,6 @@
+entrada = int(input())
+soma = entrada
+for contador in range(entrada - 1,0, -1):
+    soma*= contador
+
+print(soma)
