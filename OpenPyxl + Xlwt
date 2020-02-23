@@ -6,7 +6,7 @@ def extensao_xls():
     arquivo_excel = xlwt.Workbook()
     planilha1 = arquivo_excel.add_sheet("Planilha1")
 
-    lista = ["Nome", "Idade", "Sexo","País", "Profissão","Hobby", "Telefone"]
+    header = ["Nome", "Idade", "Sexo","País", "Profissão","Hobby", "Telefone"]
     dados = [
         ["Carlos", "21", "M", "Brasil"],
         ["João", "32", "M", "Brasil"],
@@ -17,7 +17,7 @@ def extensao_xls():
     contadorVertical = 1
     contadorHorizontal = 0
 
-    for elemento in lista:
+    for elemento in header:
         planilha1.write(0,contadorHorizontal, elemento)
         contadorHorizontal +=1
 
@@ -36,7 +36,7 @@ def extensao_xlsx():
     planilha1 = arquivo_excel.active
     planilha1.title = "Planilha1"
 
-    lista = [("Nome", "Idade", "Sexo", "País", "Profissão", "Hobby", "Telefone")]
+    header = [("Nome", "Idade", "Sexo", "País", "Profissão", "Hobby", "Telefone")]
 
     dados = [
         ["Carlos", "21", "M", "Brasil","","",11940547612],
@@ -46,7 +46,7 @@ def extensao_xlsx():
         ["Carmem","46","F", "Argentina","","Escalar"]
         ]
 
-    for elemento in lista:
+    for elemento in header:
         planilha1.append(elemento)
 
     for elemento in dados:
