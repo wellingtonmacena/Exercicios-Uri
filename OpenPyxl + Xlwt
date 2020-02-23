@@ -10,7 +10,7 @@ def extensao_xls():
     dados = [
         ["Carlos", "21", "M", "Brasil"],
         ["João", "32", "M", "Brasil"],
-        ["Marcos","12", "M", "Brasil"],
+        ["Marcos","12", "M", "Brasil","","Ler"],
         ["Paula", "19","F", "Irã"],
         ["Carmem","46","F", "Argentina"]
     ]
@@ -41,7 +41,7 @@ def extensao_xlsx():
     dados = [
         ["Carlos", "21", "M", "Brasil","","",11940547612],
         ["João", "32", "M", "Brasil","Professor"],
-        ["Marcos","12", "M", "Brasil"],
+        ["Marcos","12", "M", "Brasil","","Ler"],
         ["Paula", "19","F", "Irã","Médica"],
         ["Carmem","46","F", "Argentina","","Escalar"]
         ]
