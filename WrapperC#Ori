@@ -1,0 +1,31 @@
+IWorkbook workbook = new HSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet("Resultados");
+            IRow row = sheet.CreateRow(0);
+            ICell cell = row.CreateCell(0);
+
+            HSSFCellStyle estiloCabecalho = (HSSFCellStyle)workbook.CreateCellStyle();
+            estiloCabecalho.FillForegroundColor = IndexedColors.Aqua.Index;
+            estiloCabecalho.FillPattern = FillPattern.SolidForeground;
+            estiloCabecalho.BorderBottom = BorderStyle.Thick;
+
+            data.Insert(0, header);
+
+           // List<List<Dictionary<string, string>>> dadosEstruturados1 = new List<List<Dictionary<string, string>>> ();
+           List<List<KeyValuePair<string, string>>> dadosEstruturados = new List<List<KeyValuePair<string, string>>>();
+           string startOfLine = "[";
+           for (int vetor = 0; vetor < data.Count; vetor++)
+            {
+                List<KeyValuePair<string, string>> dado = new List<KeyValuePair<string, string>>();
+                
+                string endOfLine = ",";
+           
+                for (int iteratorAux = 0; iteratorAux < data[vetor].Count; iteratorAux++)
+                {
+                    List<string> dataTmp = data[vetor];
+                    System.Diagnostics.Trace.WriteLine(header[iteratorAux] + ": " + dataTmp[iteratorAux]);
+
+                    Console.WriteLine();
+                    dado.Add(new KeyValuePair<string, string>(header[iteratorAux], data[vetor][iteratorAux]));
+                    // Console.Write(startOfLine + header[iteratorAux] + ": " + data[vetor][iteratorAux]);
+                    if(iteratorAux == data[vetor].Count)
+                        startOfLine = "";
