@@ -1,0 +1,83 @@
+using System;
+using System.Diagnostics;
+using System.Collections.Generic;
+using System.IO;
+using NPOI.SS.UserModel;
+using NPOI.HSSF.UserModel;
+
+namespace Excel
+{
+    public class ExcelWrapper
+    {
+        public static void ListToXls(List<string> header, List<List<string>> data, string nmArquivo, bool abrirArquivo = false)
+        {
+            IWorkbook workbook = new HSSFWorkbook();
+            ISheet sheet = workbook.CreateSheet("Resultados");
+            IRow row = sheet.CreateRow(0);
+            ICell cell = row.CreateCell(0);
+
+            HSSFCellStyle estiloCabecalho = (HSSFCellStyle)workbook.CreateCellStyle();
+            estiloCabecalho.FillForegroundColor = IndexedColors.Aqua.Index;
+            estiloCabecalho.FillPattern = FillPattern.SolidForeground;
+            estiloCabecalho.BorderBottom = BorderStyle.Thick;
+
+            data.Insert(0, header);
+
+           // List<List<Dictionary<string, string>>> dadosEstruturados1 = new List<List<Dictionary<string, string>>> ();
+           List<KeyValuePair<string, string>> dadosEstruturados = new List<KeyValuePair<string, string>>();
+           string startOfLine = "[";
+           for (int vetor = 0; vetor < data.Count; vetor++)
+            {
+          
+                for (int iteratorAux = 0; iteratorAux < data[vetor].Count; iteratorAux++)
+                {
+                    KeyValuePair<string, string> dado = header[iteratorAux] + ": " + dataTmp[iteratorAux];
+                    List<string> dataTmp = data[vetor];
+                    System.Diagnostics.Trace.WriteLine(header[iteratorAux] + ": " + dataTmp[iteratorAux]);
+
+                    Console.WriteLine();
+                    dadosEstruturados.Add(dado);
+                    // Console.Write(startOfLine + header[iteratorAux] + ": " + data[vetor][iteratorAux]);
+                    if(iteratorAux == data[vetor].Count)
+                        startOfLine = "";
+                }
+            }
+
+            Console.ReadLine();
+
+            //for (int vetor = 1; vetor < data.Count; vetor++)
+            //{
+            //    dadosEstruturados.Add(data[vetor]);
+            //}
+
+            
+
+
+            //for (int vetor = 0; vetor < data.Count; vetor++)
+            //{
+            //    row = sheet.CreateRow(vetor);
+            //    for (int celula = 0; celula < data[vetor].Count; celula++)
+            //    {
+            //        cell = row.CreateCell(celula);
+            //        if (vetor == 0)
+            //        {   
+            //            cell.CellStyle = estiloCabecalho;
+            //        }
+            //       cell.SetCellValue(data[vetor][celula]);
+            //    }
+            //}
+
+            string nome_arquivo = nmArquivo + ".xls";
+            using (FileStream stream = new FileStream(nome_arquivo, FileMode.Create, FileAccess.Write))
+            {
+                workbook.Write(stream);
+            }
+
+            if (abrirArquivo == true)
+            {
+                System.Diagnostics.Process.Start(nome_arquivo);
+
+            }
+        }
+    }
+}
