@@ -1,0 +1,12 @@
+notas = 0
+qtd_validas = 0
+while(True):
+    nota = float(input())
+    if nota >=0 and nota <=10:
+        notas += nota
+        qtd_validas +=1
+    else:
+         print("nota invalida")
+    if qtd_validas ==2:
+        break
+print("media = {:.2f}".format(notas/2))
