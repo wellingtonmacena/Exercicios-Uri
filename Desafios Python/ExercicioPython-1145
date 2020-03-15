@@ -1,0 +1,38 @@
+qtd_partidas = 0
+vitorias_inter = 0
+vitorias_gremio = 0
+qtd_empate = 0
+
+while True:
+    entrada = input().split()
+    inter = int(entrada[0])
+    gremio = int(entrada[1])
+    qtd_partidas +=1
+
+    if inter > gremio:
+        vitorias_inter += 1
+    elif gremio > inter:
+        vitorias_gremio +=1
+    else:
+        qtd_empate +=1
+
+    if vitorias_inter > vitorias_gremio:
+        mais_vencedor = "Inter venceu mais"
+    elif vitorias_gremio > vitorias_inter:
+        mais_vencedor = "Gremio venceu mais"
+    else:
+        mais_vencedor = "Nao houve vencedor"
+
+    print("Novo grenal (1-sim 2-nao)")
+    resposta = int(input())
+    while resposta != 1 and resposta != 2:
+        print("Novo grenal (1-sim 2-nao)")
+        resposta = int(input())
+    if resposta ==2:
+        break
+
+print("{} grenais".format(qtd_partidas))
+print("Inter:{}".format(vitorias_inter))
+print("Gremio:{}".format(vitorias_gremio))
+print("Empates:{}".format(qtd_empate))
+print(mais_vencedor)
