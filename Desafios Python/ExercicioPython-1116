@@ -1,0 +1,10 @@
+qtd_entrada = int(input())
+for volta in range(qtd_entrada):
+    entrada = input().split()
+    a = int(entrada[0])
+    b = int(entrada[1])
+
+    if b ==0:
+        print("divisao impossivel")
+    else:
+        print("{:.1f}".format(a/b))
