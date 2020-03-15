@@ -1,0 +1,16 @@
+entrada = input().split()
+qtd_linha = int(entrada[0])
+final = int(entrada[1])
+cont_quebra =0
+linha =''
+
+for contador in range(1, final+1):
+    if contador == final:
+        print(linha + str(final))
+    else:
+        linha += str(contador) + ' '
+        cont_quebra+=1
+        if cont_quebra == qtd_linha:
+            print(linha[:-1])
+            cont_quebra =0
+            linha =''
