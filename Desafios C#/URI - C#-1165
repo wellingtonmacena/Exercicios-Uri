@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{	
+		
+		int qtd_entrada = int.Parse(Console.ReadLine());
+		for(int volta = 0; volta < qtd_entrada; volta++)
+		{
+			int qtdDivisores = 0;
+			int numeroEntrada = int.Parse(Console.ReadLine());
+			for (int numeroAtual = 1; numeroAtual <= numeroEntrada; numeroAtual ++)
+			{
+				if (numeroEntrada % numeroAtual == 0)
+				{
+					qtdDivisores++;
+				}
+			}
+			
+			if(qtdDivisores > 2)
+			{
+				Console.WriteLine(numeroEntrada + " nao eh primo");
+			}
+			else
+			{
+				Console.WriteLine(numeroEntrada + " eh primo");
+			}
+		}
+	
+	}
+}
