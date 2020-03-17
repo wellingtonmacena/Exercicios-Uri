@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{	
+		int numAtual = int.Parse(Console.ReadLine());
+		int[] vetor = new int[10];
+		for(int elemento = 0; elemento < vetor.Length; elemento++)
+		{
+			
+			vetor[elemento] = numAtual;
+			numAtual*=2;
+				
+		}
+		
+		for(int elemento = 0; elemento < vetor.Length; elemento++)
+		{
+			Console.WriteLine("N[" + elemento + "] = " + vetor[elemento]);
+		}
+		
+	}
+}
