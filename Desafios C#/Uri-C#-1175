@@ -1,0 +1,20 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int[] vetor = new int[20];
+		for(int elemento =19; elemento >= 0; elemento--)
+		{	
+			int numero = int.Parse(Console.ReadLine());
+			vetor[elemento] = numero;
+		}
+		
+		for(int elemento = 0; elemento < vetor.Length; elemento++)
+		{
+			Console.WriteLine("N["+ elemento +"] = " + vetor[elemento]);
+			
+		}
+	}
+}
