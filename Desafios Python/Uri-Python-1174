@@ -1,0 +1,7 @@
+vetor = []
+for elemento in range(100):
+  vetor.append(float(input()))
+
+for elemento in range(len(vetor)):
+  if vetor[elemento] <=10:
+    print("A[{}] = {}".format(elemento, vetor[elemento]))
