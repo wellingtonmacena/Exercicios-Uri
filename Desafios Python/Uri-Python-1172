@@ -1,0 +1,9 @@
+vetor =[]
+for elemento in range(10):
+  vetor.append(int(input()))
+
+for elemento in range(len(vetor)):
+  if vetor[elemento] >0:
+    print("X[{}] = {}".format(elemento, vetor[elemento]))
+  else:
+    print("X[{}] = 1".format(elemento))
