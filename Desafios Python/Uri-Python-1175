@@ -1,0 +1,6 @@
+vetor = []
+for elemento in range(20):      
+  vetor.insert(0, int(input()))
+
+for posicao, elemento in enumerate(vetor):
+  print("N[{}] = {}".format(posicao, elemento))
