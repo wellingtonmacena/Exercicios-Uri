@@ -1,0 +1,11 @@
+vetor = []
+posicao = 0
+entrada = int(input())
+while len(vetor) < 1000:
+  for elemento in range(entrada):
+    if len(vetor) == 1000:
+      break
+    else:
+      vetor.append(elemento)
+      print("N[{}] = {}".format(posicao, elemento))
+      posicao+=1
