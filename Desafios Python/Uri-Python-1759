@@ -1,0 +1,8 @@
+qtd_repeticoes = int(input())
+frase = ''
+for volta in range(qtd_repeticoes):
+    if volta == qtd_repeticoes-1:
+        frase +="Ho!"
+    else:
+        frase +="Ho "
+print(frase)
