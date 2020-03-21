@@ -1,0 +1,54 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		List<int> vetorPar = new List<int>();
+		List<int> vetorImpar = new List<int>();
+		for(int volta = 0; volta <15; volta++)
+		{
+			int entrada = int.Parse(Console.ReadLine());
+			
+			if (entrada % 2 ==0)
+			{
+				vetorPar.Add(entrada);
+			}
+			else
+			{
+				vetorImpar.Add(entrada);
+			}
+			
+			if (vetorPar.Count == 5)
+			{
+				for(int indice = 0; indice < vetorPar.Count; indice++)
+				{
+					Console.WriteLine("par["+indice+"] = " + vetorPar[indice]);
+				}
+				vetorPar.Clear();
+			}
+			
+			if (vetorImpar.Count == 5)
+			{
+				for(int indice = 0; indice < vetorImpar.Count; indice++)
+				{
+					Console.WriteLine("impar["+indice+"] = " +vetorImpar[indice]);
+				}
+				vetorImpar.Clear();
+			}
+
+		}
+		
+		for (int indice = 0; indice < vetorImpar.Count; indice++)
+		{
+			Console.WriteLine("impar["+indice+"] = " +vetorImpar[indice]);
+		}
+		
+		for(int indice = 0; indice < vetorPar.Count; indice++)
+		{
+			Console.WriteLine("par["+indice+"] = " + vetorPar[indice]);
+		}
+		
+	}
+}
