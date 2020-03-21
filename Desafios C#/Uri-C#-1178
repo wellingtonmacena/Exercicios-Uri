@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+					
+public class Program
+{
+	public static void Main()
+	{
+		List<int> vetor = new List<int>();
+		int posicao = 0;
+		int entrada = int.Parse(Console.ReadLine());
+		while(vetor.Count <1000)
+		{
+			for (int elemento = 0; elemento <entrada; elemento++)
+			{
+				if (vetor.Count == 1000)
+				{
+					break;
+				}
+				else
+				{
+					vetor.Add(elemento);
+					Console.WriteLine("N[" + posicao + "] = " + elemento);
+					posicao++;
+				}
+			}
+		}
+	}
+}
