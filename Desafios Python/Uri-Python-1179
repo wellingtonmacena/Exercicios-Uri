@@ -1,0 +1,26 @@
+vetorImpar = []
+vetorPar = []
+
+for volta in range(15):
+    entrada = int(input())
+
+    if entrada %2 ==0:
+        vetorPar.append(entrada)
+    else:
+        vetorImpar.append(entrada)
+
+    if len(vetorPar) == 5:
+        for elemento in range(len(vetorPar)):
+            print("par[{}] = {}".format(elemento, vetorPar[elemento]))
+        vetorPar.clear()
+
+    if len(vetorImpar) == 5:
+        for elemento in range(len(vetorImpar)):
+            print("impar[{}] = {}".format(elemento, vetorImpar[elemento]))
+        vetorImpar.clear()
+
+for elemento in range(len(vetorImpar)):
+    print("impar[{}] = {}".format(elemento, vetorImpar[elemento]))
+
+for elemento in range(len(vetorPar)):
+    print("par[{}] = {}".format(elemento, vetorPar[elemento]))
