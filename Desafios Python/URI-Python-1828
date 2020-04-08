@@ -1,0 +1,51 @@
+qtd_entrada = int(input())
+
+for volta in range(qtd_entrada):
+    resposta_sheldon, resposta_raj = input().split()
+    resultado = 'Caso #{0}: '.format(volta + 1)
+
+    if resposta_sheldon == 'tesoura':
+        if resposta_raj == 'lagarto' or resposta_raj == 'papel':
+            resultado += 'Bazinga!'
+        elif resposta_raj == 'tesoura':
+            resultado += 'De novo!'
+        else:
+            resultado += 'Raj trapaceou!'
+
+    elif resposta_sheldon == 'papel':
+
+        if resposta_raj == 'Spock' or resposta_raj == 'pedra':
+            resultado += 'Bazinga!'
+        elif resposta_raj == 'papel':
+            resultado += 'De novo!'
+        else:
+            resultado += 'Raj trapaceou!'
+
+    elif resposta_sheldon == 'lagarto':
+
+        if resposta_raj == 'Spock' or resposta_raj == 'papel':
+            resultado += 'Bazinga!'
+        elif resposta_raj == 'lagarto':
+            resultado += 'De novo!'
+        else:
+            resultado += 'Raj trapaceou!'
+
+    elif resposta_sheldon == 'Spock':
+
+        if resposta_raj == 'tesoura' or resposta_raj == 'pedra':
+            resultado += 'Bazinga!'
+        elif resposta_raj == 'Spock':
+            resultado += 'De novo!'
+        else:
+            resultado += 'Raj trapaceou!'
+
+    else:
+
+        if resposta_raj == 'tesoura' or resposta_raj == 'lagarto':
+            resultado += 'Bazinga!'
+        elif resposta_raj == 'pedra':
+            resultado += 'De novo!'
+        else:
+            resultado += 'Raj trapaceou!'
+
+    print(resultado)
