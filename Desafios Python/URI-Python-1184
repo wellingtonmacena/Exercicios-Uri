@@ -1,0 +1,29 @@
+matriz = []
+operacao = input().upper()
+elementos_adicionados= []
+qtd_valores_adicionados = 0
+soma = 0
+
+for volta in range(12):
+    vetor = []
+    for valor in range(12):
+        entrada = float(input())
+        vetor.append(entrada)
+    matriz.append(vetor)
+
+indice_aceitos = []
+indice_atual = 0
+for vetor in matriz:
+    for indice in range(0,12):
+        if indice in indice_aceitos:
+            soma+=vetor[indice-1]
+            qtd_valores_adicionados += 1
+    indice_atual+=1
+    indice_aceitos.append(indice_atual)
+
+
+if operacao == "S":
+    print("{:.1f}".format(soma))
+elif operacao == "M":
+    media = soma/qtd_valores_adicionados
+    print("{:.1f}".format(media))
