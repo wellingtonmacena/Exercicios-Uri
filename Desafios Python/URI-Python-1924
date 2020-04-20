@@ -1,0 +1,6 @@
+qtd_entrada = int(input())
+
+for volta in range(qtd_entrada):
+  entrada = input()
+
+print("Ciencia da Computacao")

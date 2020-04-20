@@ -1,0 +1,16 @@
+qtd_entrada = int(input())
+
+entrada = input().split()
+menorValor = 0
+menorPosicao = 0
+for elemento in range(qtd_entrada):
+
+    if elemento ==0:
+        menor = int(entrada[elemento])
+        menorPosicao = elemento + 1
+    
+    if int(entrada[elemento]) < menor:
+        menor = int(entrada[elemento])
+        menorPosicao = elemento + 1
+
+print(menorPosicao)

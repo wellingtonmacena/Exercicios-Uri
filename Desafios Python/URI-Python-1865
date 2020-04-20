@@ -1,0 +1,8 @@
+qtd_entrada = int(input())
+
+for volta in range(qtd_entrada):
+    nome, forca = input().split()
+    if nome == 'Thor':
+        print('Y')
+    else:
+        print('N')

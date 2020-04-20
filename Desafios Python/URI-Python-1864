@@ -1,0 +1,9 @@
+citacao = "life is not a problem to be solved"
+frase_resultado = ''
+underline = '\u0332'
+entrada = int(input())
+
+for posicao in range(entrada):
+    frase_resultado += citacao[posicao].upper()
+
+print(frase_resultado)

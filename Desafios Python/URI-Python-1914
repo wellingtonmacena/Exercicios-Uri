@@ -1,0 +1,18 @@
+qtd_entrances = int(input())
+
+for loop in range(qtd_entrances):
+  totalSum = 0
+  nameP1, choiceP1, nameP2, choiceP2  = input().split()
+  numberP1, numberP2 = input().split()
+  numberP1 = int(numberP1)
+  numberP2 = int(numberP2)
+  totalSum= numberP1 + numberP2
+
+  if totalSum %2 == 0 and choiceP1 =="PAR" :
+    print(nameP1)
+  elif totalSum %2 == 0 and choiceP2 =="PAR" :
+    print(nameP2)
+  elif totalSum %2 == 1 and choiceP1 =="IMPAR" :
+    print(nameP1)
+  elif totalSum %2 == 1 and choiceP2 =="IMPAR":
+    print(nameP2)

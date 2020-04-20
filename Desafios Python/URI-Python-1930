@@ -1,0 +1,6 @@
+from functools import reduce
+
+valores = input().split()
+
+soma = reduce(lambda x, y: int(x) + int(y) -1, valores)
+print(soma)
