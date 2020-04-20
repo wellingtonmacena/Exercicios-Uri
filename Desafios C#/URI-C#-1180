@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int tamanhoVetor = int.Parse(Console.ReadLine());
+		int[] vetor = new int[tamanhoVetor];
+		string[] entrada = Console.ReadLine().Split();
+		int menorPosicao =0;
+		int menorValor = 0;
+		for(int indice = 0; indice < vetor.Length; indice++)
+		{
+			if(indice ==0)
+			{
+				menorValor = int.Parse(entrada[indice]);
+				vetor[indice] = int.Parse(entrada[indice]);
+			}
+			else
+			{
+				if(int.Parse(entrada[indice]) < menorValor)
+				{
+					menorValor = int.Parse(entrada[indice]);
+					menorPosicao = indice;
+				}
+			}
+
+		}
+			Console.WriteLine("Menor valor: "+ menorValor);
+			Console.WriteLine("Posicao: "+ menorPosicao);
+	}
+}

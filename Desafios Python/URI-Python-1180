@@ -1,0 +1,15 @@
+vetor = []
+tamanho_vetor = int(input()) #Desnecessário
+menor_posicao = 0
+menor_valor = 0
+entrada = input().split()
+
+for indice, valor in enumerate(entrada):
+    if indice ==0:
+        menor_valor = int(valor)
+    else:
+        if int(valor) < menor_valor:
+            menor_valor = int(valor)
+            menor_posicao = indice
+print("Menor valor: {}".format(menor_valor))
+print("Posicao: {}".format(menor_posicao))

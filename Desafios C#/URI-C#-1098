@@ -1,0 +1,23 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double indice = 0;
+		int jota = 1;
+		double soma = 0;
+	 	
+		while (indice <= 2)
+		{
+			for (int contador = 0; contador <3; contador ++)
+			{
+				soma = jota + indice;
+				Console.WriteLine("I=" + indice + " J=" + soma);
+				jota +=1;
+			}
+			indice +=0.2;
+			jota = 1;
+		}
+	}
+}

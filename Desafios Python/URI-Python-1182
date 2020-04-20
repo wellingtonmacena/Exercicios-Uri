@@ -1,0 +1,20 @@
+matriz = []
+
+coluna_operacao = int(input())
+
+operacao = input().upper()
+soma = 0
+for vetor in range(12):
+    vetor = []
+    for valor in range(12):
+        entrada = float(input())
+        if valor == coluna_operacao:
+            soma += entrada
+        vetor.append(entrada)
+    matriz.append(vetor)
+
+if operacao =="M":
+    media = soma/len(matriz[coluna_operacao])
+    print("{:.1f}".format(media))
+elif operacao == "S":
+    print("{:.1f}".format(soma))

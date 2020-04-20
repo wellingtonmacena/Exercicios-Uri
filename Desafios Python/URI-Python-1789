@@ -1,0 +1,21 @@
+try:
+    while True:
+        int(input())
+
+        entrada = input().split()
+        entrada_inteiros = []
+
+        for elemento in entrada:
+            entrada_inteiros.append(int(elemento))
+
+        entrada_inteiros.sort()
+        maior = entrada_inteiros[-1]
+
+        if maior < 10:
+            print(1)
+        elif maior <20:
+            print(2)
+        else:
+            print(3)
+except EOFError:
+    pass

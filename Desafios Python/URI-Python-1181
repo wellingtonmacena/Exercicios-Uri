@@ -1,0 +1,22 @@
+matriz = []
+
+linha_de_operacao = int(input())
+operacao = input().upper()
+for indice_vetor in range(12):
+    vetor = []
+    for elemento in range(12):
+        entrada = float(input())
+        vetor.append(entrada)
+    matriz.append(vetor)
+
+if operacao == "M":
+    soma = 0
+    for valor in matriz[linha_de_operacao]:
+        soma +=valor
+    media = soma/ len(matriz[linha_de_operacao])
+    print("{:.1f}".format(media))
+elif operacao == "S":
+    soma = 0
+    for valor in matriz[linha_de_operacao]:
+        soma += valor
+    print("{:.1f}".format(soma))
