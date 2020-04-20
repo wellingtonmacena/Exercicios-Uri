@@ -1,0 +1,10 @@
+qtd_entrada = int(input())
+for volta in range(qtd_entrada):
+    entrada = int(input())
+    soma = 0
+    for termo in range(entrada):
+        if termo % 2 == 0:
+            soma +=1
+        else:
+            soma -=1       
+    print(soma)
