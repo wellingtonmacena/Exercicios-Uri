@@ -1,0 +1,1 @@
+ SELECT l.name, CAST(EXTRACT( DAY FROM l.payday ) AS  DECIMAL) as day from loan l

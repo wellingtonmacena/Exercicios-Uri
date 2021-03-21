@@ -1,0 +1,1 @@
+select  p.name, round(p.salary * 0.10,2) tax FROM people p where p.salary >=3000

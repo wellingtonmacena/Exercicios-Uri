@@ -1,0 +1,2 @@
+ (SELECT concat('Podium: ', l.team) as name from league l order by l.position limit 3)
+ union all (SELECT concat('Demoted: ', l.team) as name from league l where l.position > 13 )

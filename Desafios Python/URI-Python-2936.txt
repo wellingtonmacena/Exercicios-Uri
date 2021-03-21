@@ -1,0 +1,9 @@
+curupira_potion_quantity = int(input()) * 300
+boitata_potion_quantity = int(input()) * 1500
+boto_potion_quantity = int(input()) * 600
+mapinguari_potion_quantity = int(input()) * 1000
+iara_potion_quantity = int(input()) * 150
+dona_chica_potion_quantity = 225
+
+result = curupira_potion_quantity + boitata_potion_quantity + boto_potion_quantity + iara_potion_quantity + dona_chica_potion_quantity + mapinguari_potion_quantity
+print(result)
